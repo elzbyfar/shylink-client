@@ -64,7 +64,7 @@
 	/* align-self: flex-end; */
 	/* height: 40%; */
 	width: 22%;
-	margin-left: -10%;
+	margin-left: -20%;
 	object-fit: contain;
 	min-height: 130px;
 	filter: blur(2.5px);
@@ -78,7 +78,7 @@
 	/* align-self: flex-end; */
 	/* height: 40%; */
 	width: 22%;
-	margin-left: -10%;
+	margin-left: -20%;
 	object-fit: contain;
 	min-height: 130px;
 	z-index: 1;
@@ -136,7 +136,7 @@
 	transition-timing-function: cubic-bezier(.65, -0.47, 0, 1.61);
 }
 #submit-off:focus {
-	outline: none
+	outline: none;
 }
 #submit {
 	margin-top: 1%;
