@@ -24,6 +24,12 @@ function Index(props) {
     })
   }
 
+  const highlightTitle = () => {
+    // console.log('hit')
+    props.setHighlighter(true)
+    setTimeout(() => props.setHighlighter(false), 1000)
+  }
+
   const copyLink = (link) => {
     navigator.clipboard.writeText(link)
     props.setCopied(true)
@@ -60,7 +66,8 @@ function Index(props) {
 			</div>
 			<div className="form-container" > 
 				<div className="form">
-      <span className="form-title">Enter A Long Link</span>
+
+      <span className={props.highlighter ? "form-title-highlight" : "form-title"}>Enter A Long Link</span>
 					<span className="label">Long Link</span>
           <input 
             className="link" 
@@ -84,7 +91,7 @@ function Index(props) {
 								placeholder="(optional)"
 							/>
 						</div>
-						<button id={props.longURL === '' ? "submit-off" : "submit"} onClick={props.longURL !== "" && fetchLink()}>SHRINK</button>
+						<button id={props.longURL === '' ? "submit-off" : "submit"} onClick={props.longURL === "" ? () => highlightTitle() : () => fetchLink()}>SHRINK</button>
 					</div>
           <div className="result-container">
             <span className={props.shorty === "SHORT LINK WILL APPEAR HERE" ? "no-result" : "result"} onClick={() => copyLink(props.shorty)}>{props.shorty}

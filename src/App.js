@@ -11,6 +11,7 @@ function App() {
   const [fullLogo, setFullLogo] = useState(true)
   const [letterLogo, setLetterLogo] = useState(false)
   const [logoChange, setLogoChange] = useState(false)
+  const [highlighter, setHighlighter] = useState(false)
 
 	return (
 		<div className="App">
@@ -29,6 +30,8 @@ function App() {
         setLetterLogo={setLetterLogo}
         logoChange={logoChange}
         setLogoChange={setLogoChange}
+        highlighter={highlighter}
+        setHighlighter={setHighlighter}
       />
 		</div>
 	);
