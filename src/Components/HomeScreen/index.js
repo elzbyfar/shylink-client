@@ -6,7 +6,7 @@ import './styles.css';
 function Index(props) {
 
   const fetchLink = () => {
-    fetch('https://shrink-your-link.herokuapp.com/urls', {
+    fetch('https://shylink.herokuapp.com/urls', {
     method: 'POST', 
     headers: {
       'content-type': 'application/json',
