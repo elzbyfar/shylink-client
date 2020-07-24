@@ -38,17 +38,17 @@ function Index(props) {
 
   const switchLogo = () => {
     if (props.logoChange === false) {
-      setTimeout(() => props.setLogoChange(null), 6000)
+      setTimeout(() => props.setLogoChange(null), 2000)
       setTimeout(() => {
         switchLogo()
         props.setLogoChange(true)
-      }, 7050)
+      }, 3000)
     } else if (props.logoChange === true) {
-      setTimeout(() => props.setLogoChange(null), 6000)
+      setTimeout(() => props.setLogoChange(null), 4000)
       setTimeout(() => {
         switchLogo()
         props.setLogoChange(false)
-      }, 7050)
+      }, 5000)
     }
   }
 
