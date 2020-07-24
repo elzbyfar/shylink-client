@@ -84,7 +84,7 @@ function Index(props) {
 								placeholder="(optional)"
 							/>
 						</div>
-						<button id={props.longURL === '' ? "submit-off" : "submit"} onClick={() => fetchLink()}>SHRINK</button>
+						<button id={props.longURL === '' ? "submit-off" : "submit"} onClick={props.longURL !== "" && fetchLink()}>SHRINK</button>
 					</div>
           <div className="result-container">
             <span className={props.shorty === "SHORT LINK WILL APPEAR HERE" ? "no-result" : "result"} onClick={() => copyLink(props.shorty)}>{props.shorty}
