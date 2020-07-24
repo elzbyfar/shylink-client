@@ -1,12 +1,12 @@
-import React from 'react';
-import shrink from './shrink.png';
+import React, { useEffect } from 'react';
+import shrink from './shy-link2.png';
 import shrinkLogo from './shrink-logo.png'
 import './styles.css';
 
-const index = (props) => {
+function Index(props) {
 
   const fetchLink = () => {
-    fetch('http://localhost:3000/urls', {
+    fetch('https://shrink-your-link.herokuapp.com/urls', {
     method: 'POST', 
     headers: {
       'content-type': 'application/json',
@@ -31,32 +31,34 @@ const index = (props) => {
   }
 
   const switchLogo = () => {
-    if (props.logoChange) {
-      props.setLogoChange(false)
-      props.setLetterLogo(false)
-      setTimeout(() => props.setFullLogo(true), 700)
-      // setTimeout(() => switchLogo(), 7000)
-    } else {
-      props.setLogoChange(true)
-      props.setFullLogo(false)
-      setTimeout(() => props.setLetterLogo(true), 200)
-      // setTimeout(() => switchLogo(), 7000)
+    if (props.logoChange === false) {
+      setTimeout(() => props.setLogoChange(null), 6000)
+      setTimeout(() => {
+        switchLogo()
+        props.setLogoChange(true)
+      }, 7050)
+    } else if (props.logoChange === true) {
+      setTimeout(() => props.setLogoChange(null), 6000)
+      setTimeout(() => {
+        switchLogo()
+        props.setLogoChange(false)
+      }, 7050)
     }
   }
 
-  // useEffect(() => {
-  //   () => switchLogo()
-  // }, [])
+  useEffect(() => {
+    switchLogo();
+  }, [props.logoChange])
 
   return (
     <>
-      <div className="logo-container" onMouseEnter={() => switchLogo()} onClick={() => window.location.reload(true)}>
-        <img src={shrink} className={props.fullLogo ? "shrink-logo" : "shrink-logo-hidden"} />
-				<img src={shrink} className={props.fullLogo ? "shrink-logo-copy" : "shrink-logo-copy-hidden"} />
-        <img src={shrinkLogo} className={props.letterLogo ? "shrink-logo" : "shrink-logo-hidden"} />
-				<img src={shrinkLogo} className={props.letterLogo ? "shrink-logo-copy" : "shrink-logo-copy-hidden"} />
+      <div className="logo-container" onClick={() => window.location.reload(true)}>
+        <img src={shrink} className={props.logoChange ? "shrink-logo" : "shrink-logo-hidden"} />
+				<img src={shrink} className={props.logoChange ? "shrink-logo-copy" : "shrink-logo-copy-hidden"} />
+        <img src={shrinkLogo} className={props.logoChange === false ? "shrink-logo" : "shrink-logo-hidden"} />
+				<img src={shrinkLogo} className={props.logoChange === false ? "shrink-logo-copy" : "shrink-logo-copy-hidden"} />
 			</div>
-			<div className="form-container" onMouseEnter={() => switchLogo()} > 
+			<div className="form-container" > 
 				<div className="form">
       <span className="form-title">Enter A Long Link</span>
 					<span className="label">Long Link</span>
@@ -100,4 +102,4 @@ const index = (props) => {
   );
 }
 
-export default index;
+export default Index;

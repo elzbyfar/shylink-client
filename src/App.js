@@ -12,7 +12,6 @@ function App() {
   const [letterLogo, setLetterLogo] = useState(false)
   const [logoChange, setLogoChange] = useState(false)
 
-  console.log(alias)
 	return (
 		<div className="App">
 			<HomeScreen 
