@@ -1,0 +1,65 @@
+.logo-container {
+	width: 30%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #282c34;
+	padding-right: 0.5%;
+	cursor: pointer;
+}
+.logo {
+	background: url('./assets/logo.gif');
+	background-size: contain;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	mix-blend-mode: lighten;
+}
+@media only screen and (max-width: 768px) {
+	.logo-container {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 20%;
+		min-height: 120px;
+	}
+	.logo {
+		background: url('./assets/shy-link-logo.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	.logo-container {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 20%;
+		min-height: 80px;
+	}
+	.logo {
+		background: url('./assets/s-logo.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+@media only screen and (max-width: 319px) {
+	.logo-container {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 15%;
+		min-height: 60px;
+	}
+	.logo {
+		background: url('./assets/s-logo.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}

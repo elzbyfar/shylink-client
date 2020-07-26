@@ -19,24 +19,6 @@
 	font-size: 12px;
 	font-weight: 600;
 }
-.logo-container {
-	width: 30%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background-color: #282c34;
-	padding-right: 0.5%;
-}
-.logo {
-	position: absolute;
-	margin-top: -5%;
-	width: 30%;
-	mix-blend-mode: lighten;
-	object-fit: contain;
-	min-height: 130px;
-}
 .link {
 	width: 100%;
 	margin-bottom: 2%;
@@ -150,6 +132,8 @@
 .label {
 	width: 100%;
 	text-align: left;
+	color: #555;
+	font-weight: 400;
 }
 .no-result {
 	position: absolute;
@@ -177,16 +161,18 @@
 	font-weight: 500;
 	width: 50%;
 	border-radius: 15px;
-	height: 60px;
+	height: 100px;
+	padding: 1%;
 	text-decoration: none;
 	color: rgb(4, 7, 5);
 	overflow: hidden;
+	overflow-wrap: anywhere;
 	background-color: rgb(238, 237, 234);
 	transition: all 0.5s ease-in-out;
 	margin-top: 80px;
 }
 .result-button-container {
-	width: 100%;
+	width: 50%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
@@ -222,4 +208,66 @@
 	font-weight: 700;
 	margin-top: 3%;
 	transition: all 1s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+	.form-container {
+		display: flex;
+		width: 100%;
+	}
+	.form {
+		justify-content: flex-start;
+		margin-top: 25%;
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	.form {
+		height: 80%;
+		justify-content: flex-start;
+	}
+	.form-title {
+		margin-top: -15%;
+		margin-bottom: 10%;
+		width: 90%;
+	}
+	.form-title-highlight {
+		margin-top: -15%;
+		margin-bottom: 10%;
+		width: 90%;
+	}
+	.submit-container {
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 100%;
+		height: 30%;
+	}
+	.alias-container {
+		width: 50%;
+		align-items: center;
+	}
+	.alias {
+		width: 100%;
+	}
+	#submit-off {
+		height: 15%;
+		font-size: 11px;
+		text-align: center;
+		letter-spacing: 2px;
+		transition: all 0.8s ease-in-out;
+	}
+	#submit {
+		height: 15%;
+		font-size: 11px;
+		text-align: center;
+		letter-spacing: 2px;
+		transition: all 0.8s ease-in-out;
+	}
+	.result {
+		width: 90%;
+		overflow-wrap: anywhere;
+		height: 100px;
+	}
+}
+@media only screen and (max-width: 319px) {
 }

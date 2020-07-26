@@ -1,27 +1,8 @@
-import React, { useEffect } from 'react';
-import logo from './logo.gif'
-import './styles.css';
+import React from 'react';
+import fetchLink from '../../Helpers/fetchLink'
+import './styles.css'
 
-function Index(props) {
-
-  const fetchLink = () => {
-    fetch('https://shylink.herokuapp.com/urls', {
-    method: 'POST', 
-    headers: {
-      'content-type': 'application/json',
-      'accept': 'application/json',
-    }, 
-    body: JSON.stringify({
-      long_address: props.longURL,
-      short_address: '', 
-      alias: props.alias
-    })
-  })
-    .then(resp => resp.json())
-    .then(data => {
-      props.setShorty(data.short_address)
-    })
-  }
+const index = (props) => {
 
   const highlightTitle = () => {
     props.setHighlighter(true)
@@ -35,11 +16,7 @@ function Index(props) {
   }
 
   return (
-    <>
-      <div className="logo-container" onClick={() => window.location.reload(true)}>
-        <img src={logo} className="logo" />
-			</div>
-			<div className="form-container" > 
+    <div className="form-container" > 
 				<div className="form">
 
       <span className={props.highlighter ? "form-title-highlight" : "form-title"}>Enter A Long Link Below</span>
@@ -66,22 +43,21 @@ function Index(props) {
 								placeholder="(optional)"
 							/>
 						</div>
-						<button id={props.longURL === '' ? "submit-off" : "submit"} onClick={props.longURL === "" ? () => highlightTitle() : () => fetchLink()}>MAKE IT SHY</button>
+						<button id={props.longURL === '' ? "submit-off" : "submit"} onClick={props.longURL === "" ? () => highlightTitle() : () => fetchLink({address: props.longURL, alias: props.alias}, props.setShorty)}>MAKE IT SHY</button>
 					</div>
           <div className="result-container">
             <span className={props.shorty === "SHORT LINK WILL APPEAR HERE" ? "no-result" : "result"} onClick={props.shorty === "SHORT LINK WILL APPEAR HERE" ? null : () => copyLink(props.shorty)}>{props.shorty}
             <div className="result-button-container">
-              <a className="result-button" href={props.shorty} target="_blank">Open</a>
+              <a className="result-button" href={props.shorty} target="_blank" rel="noopener noreferrer">Open</a>
               <span className={props.copied? "copied" : "not-copied"}>COPIED!</span>
-              <a className="result-button" onClick={() => copyLink(props.shorty)}>Copy</a>
+              <a className="result-button" onClick={() => copyLink(props.shorty)} href=".form">Copy</a>
             </div>
             </span>
             
           </div>
 				</div>
 			</div>
-    </>
   );
 }
 
-export default Index;
+export default index;

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import HomeScreen from './Components/HomeScreen'
-import './App.css';
+// import HomeScreen from '../HomeScreen'
+import LogoComponent from '../LogoComponent'
+import FormComponent from '../FormComponent'
+import './styles.css';
 
 function App() {
 
@@ -12,7 +14,10 @@ function App() {
 
 	return (
 		<div className="App">
-			<HomeScreen 
+      <LogoComponent 
+      
+      />
+      <FormComponent 
         longURL={longURL}
         setLongURL={setLongURL}
         alias={alias}
@@ -22,7 +27,7 @@ function App() {
         copied={copied}
         setCopied={setCopied}
         highlighter={highlighter}
-        setHighlighter={setHighlighter}
+        setHighlighter={setHighlighter}  
       />
 		</div>
 	);
