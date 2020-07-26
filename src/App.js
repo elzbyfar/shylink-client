@@ -8,9 +8,6 @@ function App() {
   const [alias, setAlias] = useState('')
   const [shorty, setShorty] = useState('SHORT LINK WILL APPEAR HERE')
   const [copied, setCopied] = useState(false)
-  const [fullLogo, setFullLogo] = useState(true)
-  const [letterLogo, setLetterLogo] = useState(false)
-  const [logoChange, setLogoChange] = useState(false)
   const [highlighter, setHighlighter] = useState(false)
 
 	return (
@@ -24,12 +21,6 @@ function App() {
         setShorty={setShorty}
         copied={copied}
         setCopied={setCopied}
-        fullLogo={fullLogo}
-        setFullLogo={setFullLogo}
-        letterLogo={letterLogo}
-        setLetterLogo={setLetterLogo}
-        logoChange={logoChange}
-        setLogoChange={setLogoChange}
         highlighter={highlighter}
         setHighlighter={setHighlighter}
       />

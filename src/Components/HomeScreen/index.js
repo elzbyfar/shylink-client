@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import shrink from './shy-link2.png';
-import shrinkLogo from './shrink-logo.png'
+import logo from './logo.gif'
 import './styles.css';
 
 function Index(props) {
@@ -25,7 +24,6 @@ function Index(props) {
   }
 
   const highlightTitle = () => {
-    // console.log('hit')
     props.setHighlighter(true)
     setTimeout(() => props.setHighlighter(false), 1000)
   }
@@ -36,33 +34,10 @@ function Index(props) {
     setTimeout(() => props.setCopied(false), 700)
   }
 
-  const switchLogo = () => {
-    if (props.logoChange === false) {
-      setTimeout(() => props.setLogoChange(null), 4000)
-      setTimeout(() => {
-        switchLogo()
-        props.setLogoChange(true)
-      }, 5000)
-    } else if (props.logoChange === true) {
-      setTimeout(() => props.setLogoChange(null), 4000)
-      setTimeout(() => {
-        switchLogo()
-        props.setLogoChange(false)
-      }, 5000)
-    }
-  }
-
-  useEffect(() => {
-    switchLogo();
-  }, [props.logoChange])
-
   return (
     <>
       <div className="logo-container" onClick={() => window.location.reload(true)}>
-        <img src={shrink} className={props.logoChange ? "shrink-logo" : "shrink-logo-hidden"} />
-				<img src={shrink} className={props.logoChange ? "shrink-logo-copy" : "shrink-logo-copy-hidden"} />
-        <img src={shrinkLogo} className={props.logoChange === false ? "shrink-logo" : "shrink-logo-hidden"} />
-				<img src={shrinkLogo} className={props.logoChange === false ? "shrink-logo-copy" : "shrink-logo-copy-hidden"} />
+        <img src={logo} className="logo" />
 			</div>
 			<div className="form-container" > 
 				<div className="form">
