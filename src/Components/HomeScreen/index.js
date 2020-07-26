@@ -42,7 +42,7 @@ function Index(props) {
 			<div className="form-container" > 
 				<div className="form">
 
-      <span className={props.highlighter ? "form-title-highlight" : "form-title"}>Enter A Long Link</span>
+      <span className={props.highlighter ? "form-title-highlight" : "form-title"}>Enter A Long Link Below</span>
 					<span className="label">Long Link</span>
           <input 
             className="link" 
