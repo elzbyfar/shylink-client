@@ -34,6 +34,7 @@
 	margin-top: -5%;
 	width: 30%;
 	mix-blend-mode: lighten;
+	object-fit: contain;
 	min-height: 130px;
 }
 .link {
@@ -182,22 +183,7 @@
 	overflow: hidden;
 	transition: all 0.2s ease-in-out;
 	margin-top: 40px;
-	/* padding: 2%;
-	padding-left: 3%;
-	padding-right: 3%;
-	padding-bottom: 3%; */
 }
-/* .result:hover {
-	position: absolute;
-	text-align: center;
-	font-size: 13px;
-	font-family: 'Courier New', Courier, monospace;
-	color: rgb(51, 36, 36);
-	text-shadow: -1px -1px #ffffffcc;
-	transition: all 0.2s ease-in-out;
-	background: cross-fade(rgb(223, 255, 244), rgb(9, 253, 131));
-	border-radius: 5px;
-} */
 .result-button-container {
 	width: 100%;
 	display: flex;
