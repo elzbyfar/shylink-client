@@ -66,10 +66,10 @@ function Index(props) {
 								placeholder="(optional)"
 							/>
 						</div>
-						<button id={props.longURL === '' ? "submit-off" : "submit"} onClick={props.longURL === "" ? () => highlightTitle() : () => fetchLink()}>SHRINK</button>
+						<button id={props.longURL === '' ? "submit-off" : "submit"} onClick={props.longURL === "" ? () => highlightTitle() : () => fetchLink()}>MAKE IT SHY</button>
 					</div>
           <div className="result-container">
-            <span className={props.shorty === "SHORT LINK WILL APPEAR HERE" ? "no-result" : "result"} onClick={() => copyLink(props.shorty)}>{props.shorty}
+            <span className={props.shorty === "SHORT LINK WILL APPEAR HERE" ? "no-result" : "result"} onClick={props.shorty === "SHORT LINK WILL APPEAR HERE" ? null : () => copyLink(props.shorty)}>{props.shorty}
             <div className="result-button-container">
               <a className="result-button" href={props.shorty} target="_blank">Open</a>
               <span className={props.copied? "copied" : "not-copied"}>COPIED!</span>

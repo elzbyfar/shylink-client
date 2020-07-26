@@ -71,57 +71,44 @@
 #submit-off {
 	margin-top: 1%;
 	width: 45%;
-	height: 50%;
+	height: 70%;
 	font-size: 8px;
 	font-weight: 700;
 	border-radius: 5px;
 	border-width: 0.5px;
-	letter-spacing: 2vw;
+	letter-spacing: 1vw;
 	color: rgb(0, 0, 0);
 	text-align: right;
 	float: right;
 	background-color: rgb(223, 255, 244);
 	box-shadow: 4px 4px #888888;
-	transition: all 0.7s ease-in-out;
-	transition-timing-function: cubic-bezier(.65, -0.47, 0, 1.61);
+	transition: all 0.8s ease-in-out;
 }
 #submit-off:focus {
-	outline: none;
+	outline: wheat;
 }
 #submit {
 	margin-top: 1%;
 	width: 45%;
-	height: 50%;
-	font-size: 8px;
-	font-weight: 700;
-	border-radius: 5px;
-	border-width: 0.5px;
-	letter-spacing: 2vw;
-	color: rgb(0, 0, 0);
-	text-align: right;
-	float: right;
-	background-color: rgb(223, 255, 244);
-	box-shadow: 4px 4px #888888;
-	transition: all 0.4s ease-in-out;
-}
-#submit:hover {
-	cursor: pointer;
-	margin-top: 1%;
-	width: 45%;
-	height: 90%;
+	height: 70%;
 	font-size: 13px;
 	font-weight: 700;
 	border-radius: 5px;
 	border-width: 0.5px;
 	letter-spacing: 0.001vw;
+	color: rgb(0, 0, 0);
 	text-align: right;
-	color: rgb(3, 3, 3);
+	float: right;
 	background-color: rgb(9, 253, 131);
-	transition: all 0.5s ease-in-out;
-	transition-timing-function: cubic-bezier(1, -0.68, .58, 1.54);
+	box-shadow: 4px 4px #888888;
+	transition: all 0.8s ease-in-out;
+}
+#submit:hover {
+	cursor: pointer;
 }
 #submit:focus {
-	outline: none;
+	outline: black;
+	border: 2px solid black;
 }
 .result-container {
 	width: 100%;
@@ -132,26 +119,32 @@
 	margin-top: 7%;
 }
 .form-title {
+	display: flex;
 	cursor: default;
-	text-align: center;
+	width: 60%;
+	height: 4%;
 	font-size: 13px;
-	font-family: 'Courier New', Courier, monospace;
+	font-family: monospace;
 	font-weight: 500;
 	letter-spacing: 0.4px;
-	margin-bottom: 1.5%;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
 	transition: all 1s ease-in-out;
 }
 .form-title-highlight {
+	display: flex;
 	cursor: default;
-	padding: 0.5%;
-	border-radius: 15px;
-	text-align: center;
-	background-color: rgb(255, 203, 92);
-	font-size: 14px;
-	font-family: 'Courier New', Courier, monospace;
+	width: 60%;
+	height: 4%;
+	font-size: 13px;
+	font-family: monospace;
 	font-weight: 500;
-	letter-spacing: 1.5px;
-	margin-bottom: 1.5%;
+	letter-spacing: 3px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	background-color: rgb(255, 203, 92);
 	transition: all 1s ease-in-out;
 }
 .label {
@@ -169,26 +162,34 @@
 	text-decoration: none;
 	color: rgb(4, 7, 5);
 	overflow: hidden;
-	transition: all 0.2s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	margin-top: 80px;
 }
 .result {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	position: absolute;
 	text-align: center;
 	font-size: 13px;
 	font-family: 'Courier New', Courier, monospace;
 	font-weight: 500;
-	height: 50px;
+	width: 50%;
+	border-radius: 15px;
+	height: 60px;
 	text-decoration: none;
 	color: rgb(4, 7, 5);
 	overflow: hidden;
-	transition: all 0.2s ease-in-out;
-	margin-top: 40px;
+	background-color: rgb(238, 237, 234);
+	transition: all 0.5s ease-in-out;
+	margin-top: 80px;
 }
 .result-button-container {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 .result-button {
 	font-family: Arial, Helvetica, sans-serif;
