@@ -33,7 +33,22 @@
 		background-position: center;
 	}
 }
-@media only screen and (max-height: 481px) {
+@media only screen and (max-width: 815px) and (min-width: 740px) and (orientation: landscape) {
+	.logo-container {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 20%;
+		min-height: 120px;
+	}
+	.logo {
+		background: url('./assets/shy-link-logo.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+@media only screen and (max-height: 480px) {
 	.logo-container {
 		display: flex;
 		min-height: 60px;
