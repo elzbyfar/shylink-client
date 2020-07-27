@@ -15,6 +15,10 @@ const index = (props) => {
     setTimeout(() => props.setCopied(false), 700)
   }
 
+  const formatShorty = (shorty) => {
+    return shorty.replace('https://', '') 
+  }
+
   return (
     <div className="form-container" > 
 				<div className="form">
@@ -46,7 +50,7 @@ const index = (props) => {
 						<button id={props.longURL === '' ? "submit-off" : "submit"} onClick={props.longURL === "" ? () => highlightTitle() : () => fetchLink({address: props.longURL, alias: props.alias}, props.setShorty)}>MAKE IT SHY</button>
 					</div>
           <div className="result-container">
-            <span className={props.shorty === "SHORT LINK WILL APPEAR HERE" ? "no-result" : "result"} onClick={props.shorty === "SHORT LINK WILL APPEAR HERE" ? null : () => copyLink(props.shorty)}>{props.shorty}
+            <span className={props.shorty === "SHORT LINK WILL APPEAR HERE" ? "no-result" : "result"} onClick={props.shorty === "SHORT LINK WILL APPEAR HERE" ? null : () => copyLink(props.shorty)}>{formatShorty(props.shorty)}
             <div className="result-button-container">
               <a className="result-button" href={props.shorty} target="_blank" rel="noopener noreferrer">Open</a>
               <span className={props.copied? "copied" : "not-copied"}>COPIED!</span>
