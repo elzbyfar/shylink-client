@@ -386,7 +386,7 @@
 		transition: all 0.8s ease-in-out;
 	}
 	.no-result {
-		margin-top: -50px;
+		margin-top: -30px;
 	}
 	.result-container {
 		margin-top: 10px;
@@ -397,7 +397,7 @@
 		font-size: 10px;
 		overflow-wrap: anywhere;
 		height: 30px;
-		margin-top: -50px;
+		margin-top: -30px;
 	}
 	.result-button-container {
 		margin-top: 30px;
