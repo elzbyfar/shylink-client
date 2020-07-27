@@ -62,12 +62,14 @@ const index = (props) => {
 					<div className="result-wrapper" onClick={props.shorty === '' ? () => highlightTitle() : () => copyLink(props.shorty)}>
 						<input
 							className={props.shorty === '' ? 'result result-not-filled' : 'no-result'}
-              disabled
+              disabled={props.shorty === '' ? false : true}
+              onChange={() => null}
 							value={props.shorty === '' ? 'UNLOCK SHY LINK' : ''}
 						/>
 						<input
 							className={props.shorty === '' ? 'no-result' : 'result result-filled'}
               onChange={() => null}
+              disabled={props.shorty === '' ? true : false}
               value={props.shorty === '' ? '' : formatShorty(props.shorty)}
 						/>
 						<div className={props.shorty === '' ? "result-button-container-hidden" : "result-button-container"} >
