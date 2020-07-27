@@ -388,6 +388,9 @@
 	.no-result {
 		margin-top: -50px;
 	}
+	.result-container {
+		margin-top: 10px;
+	}
 	.result {
 		width: 60%;
 		min-width: 220px;
@@ -397,7 +400,7 @@
 		margin-top: -50px;
 	}
 	.result-button-container {
-		margin-top: 40px;
+		margin-top: 30px;
 	}
 	/* .result:focus {
 		outline: none;
