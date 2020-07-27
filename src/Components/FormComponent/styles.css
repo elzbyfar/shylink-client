@@ -389,7 +389,8 @@
 		margin-top: -50px;
 	}
 	.result {
-		width: 65%;
+		width: 60%;
+		min-width: 220px;
 		font-size: 10px;
 		overflow-wrap: anywhere;
 		height: 30px;
