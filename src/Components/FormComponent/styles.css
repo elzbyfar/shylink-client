@@ -274,10 +274,14 @@
 		letter-spacing: 2px;
 		transition: all 0.8s ease-in-out;
 	}
+	.no-result {
+		margin-top: 30px;
+	}
 	.result {
 		width: 65%;
 		font-size: 12px;
 		overflow-wrap: anywhere;
 		height: 60px;
+		margin-top: 30px;
 	}
 }
