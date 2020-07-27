@@ -1,13 +1,12 @@
 .form-container {
-	align-items: center;
-	background-color: #ffffff;
+	background-color: #fff;
 	width: 70%;
 	height: 100%;
 }
 .form {
 	height: 100%;
 	width: 93%;
-	margin-top: -4%;
+	/* margin-top: -4%; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -67,7 +66,7 @@
 	transition: all 0.8s ease-in-out;
 }
 #submit-off:focus {
-	outline: wheat;
+	outline: rgb(245, 179, 179);
 }
 #submit {
 	margin-top: 1%;
@@ -148,7 +147,7 @@
 	color: rgb(88, 87, 87);
 	overflow: hidden;
 	transition: all 0.5s ease-in-out;
-	margin-top: 80px;
+	margin-top: 10px;
 }
 .result {
 	display: flex;
@@ -163,15 +162,16 @@
 	width: 20%;
 	min-width: 250px;
 	border-radius: 15px;
-	height: 50px;
+	height: 30px;
 	padding: 1%;
 	text-decoration: none;
 	color: rgb(4, 7, 5);
 	overflow: hidden;
 	overflow-wrap: anywhere;
 	background-color: rgb(238, 237, 234);
+	transform: skewY(-0.06turn, 18deg);
 	transition: all 0.5s ease-in-out;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 .result-button-container {
 	width: 70%;
@@ -251,12 +251,14 @@
 	}
 	.form-title {
 		margin-top: -15%;
-		margin-bottom: 10%;
+		margin-bottom: 5%;
 		width: 90%;
+		height: 5%;
 	}
 	.form-title-highlight {
 		margin-top: -15%;
 		margin-bottom: 10%;
+		height: 5%;
 		width: 90%;
 	}
 	.submit-container {
@@ -285,7 +287,7 @@
 		font-size: 11px;
 		text-align: center;
 		letter-spacing: 2px;
-		/* transition: all 0.8s ease-in-out; */
+		transition: all 0.8s ease-in-out;
 	}
 	#submit {
 		height: 15%;
