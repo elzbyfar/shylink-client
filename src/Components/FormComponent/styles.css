@@ -325,7 +325,6 @@
 		width: 90%;
 		height: 40%;
 		margin-top: 30%;
-		-webkit-appearance: none;
 	}
 	.form-title {
 		margin-top: -15%;
@@ -347,6 +346,7 @@
 		width: 80%;
 		min-width: 260px;
 		box-shadow: 2px 5px #888888;
+		-webkit-appearance: none;
 	}
 	.alias-container {
 		width: 60%;
@@ -356,6 +356,7 @@
 		width: 100%;
 		min-width: 200px;
 		box-shadow: 2px 5px #888888;
+		-webkit-appearance: none;
 	}
 	.submit-container {
 		flex-direction: column;
