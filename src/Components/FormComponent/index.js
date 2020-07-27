@@ -84,6 +84,9 @@ const index = (props) => {
 					</div>
 				</div>
 			</div>
+      <div className="signature-container">
+        <span className="signature"><a href="https://www.linkedin.com/in/alejoluis/" target="_blank" className="signature-link">LUIS ALEJO DESIGNS</a> © 2020.</span>
+      </div>
 		</div>
 	);
 };
