@@ -24,7 +24,7 @@
 	margin-bottom: 2%;
 	border-radius: 4px;
 	border-width: 0.5px;
-	box-shadow: 4px 4px #888888;
+	box-shadow: 1px 4px #888888;
 }
 .link:focus {
 	outline: none;
@@ -33,7 +33,7 @@
 	width: 90%;
 	border-radius: 4px;
 	border-width: 0.5px;
-	box-shadow: 4px 4px #888888;
+	box-shadow: 1px 4px #888888;
 }
 .alias:focus {
 	outline: none;
@@ -63,8 +63,8 @@
 	text-align: right;
 	float: right;
 	background-color: rgb(223, 255, 244);
-	box-shadow: 4px 4px #888888;
-	transition: all 0.8s ease-in-out;
+	box-shadow: 1px 4px #888888;
+	/* transition: all 0.8s ease-in-out; */
 }
 #submit-off:focus {
 	outline: wheat;
@@ -82,8 +82,8 @@
 	text-align: right;
 	float: right;
 	background-color: rgb(9, 253, 131);
-	box-shadow: 4px 4px #888888;
-	transition: all 0.8s ease-in-out;
+	box-shadow: 1px 1px #888888;
+	/* transition: all 0.8s ease-in-out; */
 }
 #submit:hover {
 	cursor: pointer;
@@ -240,6 +240,9 @@
 		height: 50px;
 		width: 60%;
 	}
+	.submit-off {
+		height: 15%;
+	}
 }
 @media only screen and (max-width: 480px) {
 	.form {
@@ -282,7 +285,7 @@
 		font-size: 11px;
 		text-align: center;
 		letter-spacing: 2px;
-		transition: all 0.8s ease-in-out;
+		/* transition: all 0.8s ease-in-out; */
 	}
 	#submit {
 		height: 15%;
