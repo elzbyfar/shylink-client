@@ -50,7 +50,7 @@ const index = (props) => {
             <div className="result-button-container">
               <a className="result-button" href={props.shorty} target="_blank" rel="noopener noreferrer">Open</a>
               <span className={props.copied? "copied" : "not-copied"}>COPIED!</span>
-              <a className="result-button" onClick={() => copyLink(props.shorty)} href=".form">Copy</a>
+              <a className="result-button" onClick={() => copyLink(props.shorty)} href="">Copy</a>
             </div>
             </span>
             
