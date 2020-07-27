@@ -77,7 +77,7 @@ const index = (props) => {
 								Open
 							</a>
 							<span className={props.copied ? 'copied' : 'not-copied'}>COPIED!</span>
-							<a className="result-button" onClick={() => copyLink(props.shorty)} href="/#">
+							<a className="result-button" onClick={() => copyLink(props.shorty)} href={null}>
 								Copy
 							</a>
 						</div>
