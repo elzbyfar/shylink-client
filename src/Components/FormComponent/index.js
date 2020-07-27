@@ -62,7 +62,7 @@ const index = (props) => {
 					<div className="result-wrapper" onClick={props.shorty === '' ? () => highlightTitle() : () => copyLink(props.shorty)}>
 						<input
 							className={props.shorty === '' ? 'result result-not-filled' : 'no-result'}
-              disabled={props.shorty === '' ? false : true}
+              disabled
               onChange={() => null}
 							value={props.shorty === '' ? 'UNLOCK SHY LINK' : ''}
 						/>
