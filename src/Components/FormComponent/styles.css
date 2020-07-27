@@ -325,6 +325,7 @@
 		width: 90%;
 		height: 40%;
 		margin-top: 30%;
+		-webkit-appearance: none;
 	}
 	.form-title {
 		margin-top: -15%;

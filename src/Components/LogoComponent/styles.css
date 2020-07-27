@@ -43,7 +43,7 @@
 		display: flex;
 		flex-direction: row;
 		width: 100%;
-		height: 15%;
+		height: 12%;
 		min-height: 80px;
 	}
 	.logo {
@@ -51,6 +51,7 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
+		height: 80%;
 	}
 }
 
