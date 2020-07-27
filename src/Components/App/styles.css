@@ -56,6 +56,12 @@
 
 @media only screen and (max-height: 480px) {
 	.App {
-		justify-content: space-between;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
 	}
 }
