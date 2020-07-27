@@ -18,13 +18,16 @@
 	background-repeat: no-repeat;
 	mix-blend-mode: lighten;
 }
+
+/* tablet breakpoint */
+
 @media only screen and (max-width: 768px) {
 	.logo-container {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		width: 100%;
 		height: 20%;
-		min-height: 120px;
+		/* min-height: 120px; */
 	}
 	.logo {
 		background: url('./assets/shy-link-logo.png');
@@ -33,33 +36,14 @@
 		background-position: center;
 	}
 }
-@media only screen and (max-width: 815px) and (min-width: 740px) and (orientation: landscape) {
+
+/* mobile breakpoint portrait */
+@media only screen and (max-width: 480px) {
 	.logo-container {
 		display: flex;
 		flex-direction: row;
 		width: 100%;
-		height: 20%;
-		min-height: 120px;
-	}
-	.logo {
-		background: url('./assets/shy-link-logo.png');
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-}
-@media only screen and (max-height: 480px) {
-	.logo-container {
-		display: flex;
-		min-height: 60px;
-	}
-}
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-	.logo-container {
-		display: flex;
-		flex-direction: row;
-		width: 100%;
-		height: 20%;
+		height: 15%;
 		min-height: 80px;
 	}
 	.logo {
@@ -69,18 +53,12 @@
 		background-position: center;
 	}
 }
-@media only screen and (max-width: 319px) {
+
+/* mobile breakpoint landscape */
+
+@media only screen and (max-height: 480px) {
 	.logo-container {
 		display: flex;
-		flex-direction: row;
-		width: 100%;
-		height: 20%;
 		min-height: 60px;
-	}
-	.logo {
-		background: url('./assets/s-logo.png');
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
 	}
 }

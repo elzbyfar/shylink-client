@@ -59,11 +59,11 @@ const index = (props) => {
 					</button>
 				</div>
 				<div className="result-container">
-					<div onClick={props.shorty === '' ? null : () => copyLink(props.shorty)}>
+					<div className="result-wrapper" onClick={props.shorty === '' ? () => highlightTitle() : () => copyLink(props.shorty)}>
 						<input
 							className={props.shorty === '' ? 'result result-not-filled' : 'no-result'}
-							disabled
-							value={props.shorty === '' ? 'SHY LINK WILL APPEAR HERE' : ''}
+              disabled
+							value={props.shorty === '' ? 'UNLOCK SHY LINK' : ''}
 						/>
 						<input
 							className={props.shorty === '' ? 'no-result' : 'result result-filled'}
@@ -71,7 +71,7 @@ const index = (props) => {
               value={props.shorty === '' ? '' : formatShorty(props.shorty)}
 						/>
 						<div className={props.shorty === '' ? "result-button-container-hidden" : "result-button-container"} >
-							<a className="result-button" href={props.shorty} target="_blank" rel="noopener noreferrer">
+							<a className="result-button" alt="visit page" href={props.shorty} target="_blank" rel="noopener noreferrer">
 								Open
 							</a>
 							<span className={props.copied ? 'copied' : 'not-copied'}>COPIED!</span>
