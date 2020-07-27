@@ -8,7 +8,7 @@ function App() {
 
   const [longURL, setLongURL] = useState('')
   const [alias, setAlias] = useState('')
-  const [shorty, setShorty] = useState('SHY LINK WILL APPEAR HERE')
+  const [shorty, setShorty] = useState('')
   const [copied, setCopied] = useState(false)
   const [highlighter, setHighlighter] = useState(false)
 
