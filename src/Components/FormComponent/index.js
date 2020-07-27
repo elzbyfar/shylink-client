@@ -23,8 +23,8 @@ const index = (props) => {
     <div className="form-container" > 
 				<div className="form">
 
-      <span className={props.highlighter ? "form-title-highlight" : "form-title"}>Enter A Long Link Below</span>
-					<span className="label">Long Link</span>
+      <span className={props.highlighter ? "form-title-highlight" : "form-title"}>Enter A Loud Link Below</span>
+					<span className="label">Loud Link</span>
           <input 
             className="link" 
             type="text" 
@@ -50,7 +50,7 @@ const index = (props) => {
 						<button id={props.longURL === '' ? "submit-off" : "submit"} onClick={props.longURL === "" ? () => highlightTitle() : () => fetchLink({address: props.longURL, alias: props.alias}, props.setShorty)}>MAKE IT SHY</button>
 					</div>
           <div className="result-container">
-            <span className={props.shorty === "SHORT LINK WILL APPEAR HERE" ? "no-result" : "result"} onClick={props.shorty === "SHORT LINK WILL APPEAR HERE" ? null : () => copyLink(props.shorty)}>{formatShorty(props.shorty)}
+            <span className={props.shorty === "SHY LINK WILL APPEAR HERE" ? "no-result" : "result"} onClick={props.shorty === "SHY LINK WILL APPEAR HERE" ? null : () => copyLink(props.shorty)}>{formatShorty(props.shorty)}
             <div className="result-button-container">
               <a className="result-button" href={props.shorty} target="_blank" rel="noopener noreferrer">Open</a>
               <span className={props.copied? "copied" : "not-copied"}>COPIED!</span>

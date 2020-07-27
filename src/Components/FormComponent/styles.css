@@ -64,7 +64,7 @@
 	float: right;
 	background-color: rgb(223, 255, 244);
 	box-shadow: 1px 4px #888888;
-	/* transition: all 0.8s ease-in-out; */
+	transition: all 0.8s ease-in-out;
 }
 #submit-off:focus {
 	outline: wheat;
@@ -73,17 +73,17 @@
 	margin-top: 1%;
 	width: 45%;
 	height: 58%;
-	font-size: 13px;
-	font-weight: 700;
+	font-size: 12px;
+	font-weight: 600;
 	border-radius: 5px;
 	border-width: 0.5px;
 	letter-spacing: 0.001vw;
-	color: rgb(0, 0, 0);
+	color: rgb(37, 37, 37);
 	text-align: right;
 	float: right;
 	background-color: rgb(9, 253, 131);
-	box-shadow: 1px 1px #888888;
-	/* transition: all 0.8s ease-in-out; */
+	box-shadow: 1px 4px #888888;
+	transition: all 0.8s ease-in-out;
 }
 #submit:hover {
 	cursor: pointer;
@@ -127,7 +127,7 @@
 	justify-content: center;
 	align-items: center;
 	border-radius: 15px;
-	background-color: rgb(255, 203, 92);
+	background-color: rgb(253, 244, 223);
 	transition: all 1s ease-in-out;
 }
 .label {
