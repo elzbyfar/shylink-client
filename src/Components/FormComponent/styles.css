@@ -344,7 +344,7 @@
 	}
 	.link {
 		width: 60%;
-		min-width: 240px;
+		min-width: 220px;
 		box-shadow: 2px 5px #888888;
 		-webkit-appearance: none;
 	}
@@ -369,7 +369,7 @@
 	}
 	#submit-off {
 		width: 30%;
-		min-width: 110px;
+		min-width: 120px;
 		height: 24px;
 		font-size: 60%;
 		text-align: center;
