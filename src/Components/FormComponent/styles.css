@@ -398,11 +398,11 @@
 		min-width: 220px;
 		font-size: 10px;
 		overflow-wrap: anywhere;
-		height: 30px;
+		height: 25px;
 		margin-top: -30px;
 	}
 	.result-button-container {
-		margin-top: 30px;
+		margin-top: 40px;
 	}
 }
 
@@ -414,29 +414,36 @@
 	}
 	.form {
 		justify-content: space-evenly;
-		height: 40%;
-		margin-top: 30px;
+		height: 30%;
+		margin-top: 15px;
 	}
 	.form-title {
-		margin-top: -15%;
-		margin-bottom: 5%;
+		margin-top: -20%;
+		margin-bottom: 0%;
 		width: 90%;
 		height: 22px;
 	}
 	.form-title-highlight {
-		margin-top: -15%;
-		margin-bottom: 5%;
+		margin-top: -20%;
+		margin-bottom: 0%;
 		height: 22px;
 		width: 90%;
 	}
 	.no-result {
 		margin-top: 20px;
 	}
+	.result-container {
+		margin-top: -15px;
+	}
 	.result {
 		margin-top: 20px;
 		height: 50px;
-		height: 25;
+		height: 25px;
 		width: 40%;
+	}
+	.result-button-container {
+		width: 30%;
+		margin-top: 12%;
 	}
 	.submit-off {
 		height: 15%;
@@ -486,6 +493,108 @@
 		height: 50px;
 		height: 25px;
 		width: 40%;
+	}
+	.submit-off {
+		height: 15%;
+	}
+	.link {
+		box-shadow: 2px 5px #888888;
+		-webkit-appearance: none;
+	}
+	.alias {
+		box-shadow: 2px 5px #888888;
+		-webkit-appearance: none;
+	}
+}
+
+/* mobile iPhone 6/7/8 Plus breakpoint landscape */
+
+@media only screen and (max-width: 740px) and (max-height: 480px) {
+	.form-container {
+		height: 100%;
+		width: 70%;
+	}
+	.form {
+		justify-content: space-evenly;
+		height: 35%;
+		margin-top: 100px;
+	}
+	.form-title {
+		/* margin-top: -15%; */
+		/* margin-bottom: 5%; */
+		width: 90%;
+		height: 22px;
+	}
+	.form-title-highlight {
+		/* margin-top: -15%; */
+		/* margin-bottom: 5%; */
+		height: 22px;
+		width: 90%;
+	}
+	.no-result {
+		margin-top: 20px;
+	}
+	.result-container {
+		margin-top: -15px;
+	}
+	.result {
+		margin-top: 20px;
+		height: 50px;
+		height: 25px;
+		width: 40%;
+	}
+	.submit-off {
+		height: 15%;
+	}
+	.link {
+		box-shadow: 2px 5px #888888;
+		-webkit-appearance: none;
+	}
+	.alias {
+		box-shadow: 2px 5px #888888;
+		-webkit-appearance: none;
+	}
+}
+
+/* mobile iPhone 5/SE breakpoint landscape */
+
+@media only screen and (max-width: 570px) and (max-height: 330px) {
+	.form-container {
+		height: 100%;
+		width: 70%;
+	}
+	.form {
+		justify-content: space-evenly;
+		height: 30%;
+		margin-top: 80px;
+	}
+	.form-title {
+		/* margin-top: -15%; */
+		/* margin-bottom: 5%; */
+		width: 90%;
+		height: 22px;
+	}
+	.form-title-highlight {
+		/* margin-top: -15%; */
+		/* margin-bottom: 5%; */
+		height: 22px;
+		width: 90%;
+	}
+	.no-result {
+		margin-top: 20px;
+	}
+	.result-container {
+		margin-top: -15px;
+	}
+	.result {
+		margin-top: 20px;
+		height: 50px;
+		height: 22px;
+		width: 40%;
+	}
+	.result-button-container {
+		width: 30%;
+		margin-top: 15%;
 	}
 	.submit-off {
 		height: 15%;
