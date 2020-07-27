@@ -9,6 +9,7 @@
 .signature-container {
 	position: absolute;
 	bottom: 0;
+	height: 25px;
 }
 .signature {
 	font-size: 8px;
