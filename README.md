@@ -1,68 +1,110 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+<img
+    src="https://github.com/elzbyfar/tiny-url-client/blob/master/src/Components/LogoComponent/assets/logo.gif"
+    width="100%"
+  />
+</div>
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+This is an iOS compatible side-scrolling, 2D, aquatic-themed, multi-level game
+that allows single-handed game-play. The object of the game is for a user to
+move their character across dangerous waters collecting Pellets in a given
+amount of time while avoiding other creatures and hooks. This game was inspired by FlappyBird but has an underwater twist.
 
-### `yarn start`
+## Live Demo Instructions
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To try out the game for yourself follow these instructions:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### iPhone 8 or greater
 
-### `yarn test`
+- Install the [Expo Client](https://itunes.apple.com/app/apple-store/id982107779) app on your iPhone.
+- Navigate to [this link](https://snack.expo.io/@elzbyfar/off-the-hook) on your iPhone's.
+- Click “Open with Expo”
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Web Browser (Mac/Windows)
 
-### `yarn build`
+- Navigate to [this link](https://snack.expo.io/@elzbyfar/off-the-hook).
+- Near the upper-right hand corner select the iOS tab to launch the built-in demo.
+- Alternatively you can click 'Run' at the next to the Search bar a the top of the page. This will reveal a QR code you can scan with an iPhone. (You will need to have Expo Client installed on your phone if you choose this option.)
+  Once the app gets started you're ready to play!
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Video Demo
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Learn how the game works by watching this [video demonstration](https://youtu.be/9i7zOe8aDm8).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Start Game
 
-### `yarn eject`
+Create a new account or sign-in. Select a character. Choose the level you would like to play.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<div align="center">
+  <table>
+    <tbody>
+      <tr>
+          <th align="center" height="15"><h3>HOMESCREEN</h3></th>
+          <th align="center" height="15"><h3>MENUS</h3></th>
+          <th align="center" height="15"><h3>GAMEPLAY</h3></th>
+      </tr>
+      <tr>
+        <td align="center">
+          <img
+            src="https://github.com/elzbyfar/off-the-hook-client-side-update/blob/master/App/assets/img/homescreen.gif"
+            width="95%"
+          /> 
+        </td>
+        <td align="center">
+          <img
+            src="https://github.com/elzbyfar/off-the-hook-client-side-update/blob/master/App/assets/img/character-level-select.gif"
+            width="95%"
+          />
+        </td>
+        <td align="center">
+          <img
+            src="https://github.com/elzbyfar/off-the-hook-client-side-update/blob/master/App/assets/img/level-one.gif"
+            width="95%"
+          /> 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing To "Off The Hook"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To contribute to Off The Hook, follow these steps:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Fork this repository.
+- Create a branch: `git checkout -b <branch_name>`
+- Make your changes and commit them: `git commit -m '[commit_message]'`
+- Push to the original branch: `git push origin [project_name]/[location]`
+- Create the pull request.
 
-## Learn More
+Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### NOTE: This project has only been tested on MAC.
 
-### Code Splitting
+Before you begin, be sure to have the following installed:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- [Back End Repository](https://github.com/elzbyfar/off-the-hook-server-side)
+- xCode 11.4.1
+- Ruby 2.6.1
+- Rails 6.0.2.2
+- PostgreSQL 12.1
 
-### Analyzing the Bundle Size
+## Inspiration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+I do not own the rights to any of the images included in this repository. All images were pulled from standard Google searches and edited with Adobe Photoshop. I sought out inspiration from:
 
-### Making a Progressive Web App
+- [Flappy Bird in React Native](https://www.youtube.com/watch?v=qBGnfULn8W4&t=4s)
+- [Navigation React Native](https://www.youtube.com/watch?v=nQVCkqvU1uE&t=428s)
+- Honorary Mentions: Finding Nemo & American Dad
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Contact
 
-### Advanced Configuration
+Reach out and let's chat!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [LinkedIn](https://www.linkedin.com/in/alejoluis/)
+- [Twitter](https://twitter.com/elzbyfar)
+- [Email](mailto:loumalejo@gmail.com)
