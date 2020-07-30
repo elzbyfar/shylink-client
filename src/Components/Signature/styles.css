@@ -1,0 +1,46 @@
+.signature-container {
+	position: absolute;
+	width: 70%;
+	bottom: 0;
+	height: 25px;
+	text-align: center;
+}
+.signature {
+	width: 100%;
+	font-size: 9px;
+	color: #000;
+}
+.signature-link {
+	text-decoration: none;
+	color: rgb(32, 144, 179);
+}
+
+/* tablet breakpoint */
+@media only screen and (max-width: 768px) {
+	.signature-container {
+		width: 100%;
+	}
+	.signature {
+		font-size: 7px;
+	}
+	.signature-link {
+		text-decoration: none;
+		color: rgb(32, 144, 179);
+	}
+}
+
+/* mobile breakpoint landscape */
+
+@media only screen and (max-height: 480px) {
+	.signature-container {
+		width: 100%;
+	}
+}
+
+/* mobile iPhone 6/7/8 breakpoint landscape */
+
+@media screen and (max-width: 670px) and (max-height: 380px) and (orientation: landscape) {
+	.signature-container {
+		width: 100%;
+	}
+}

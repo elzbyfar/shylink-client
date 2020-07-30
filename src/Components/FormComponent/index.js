@@ -3,21 +3,24 @@ import fetchLink from '../../Helpers/fetchLink';
 import './styles.css';
 
 const index = (props) => {
+
+
+	const baseURL = 'https://localhost:3000/'
+	// const baseURL = 'https://shylink.herokuapp.com/'
+
 	const highlightTitle = () => {
 		props.setHighlighter(true);
 		setTimeout(() => props.setHighlighter(false), 1000);
 	};
 
 	const copyLink = (link) => {
-		console.log(link)
 		navigator.clipboard.writeText(link);
 		props.setCopied(true);
 		setTimeout(() => props.setCopied(false), 700);
 	};
 
-	const formatShorty = (shorty) => {
-		return `shylink.herokuapp.com/${shorty}`
-		// return shorty.replace('https://', '');
+	const format = (shorty) => {
+		return `${baseURL}/${shorty}`
 	};
 
 	return (
@@ -27,20 +30,18 @@ const index = (props) => {
 					Enter A Loud Link Below
 				</span>
 				<input
-					className="link"
+					className="link-field"
 					type="text"
-					id="longURL"
-					name="longURL"
-					onChange={(event) => props.setLongURL(event.target.value)}
-					value={props.longURL}
+					name="fullAddress"
+					onChange={(event) => {props.setFullAddress(event.target.value)}}
+					value={props.fullAddress}
 					placeholder="Loud Link"
 				/>
 				<div className="submit-container">
 					<div className="alias-container">
 						<input
-							className="alias"
+							className="alias-field"
 							type="text"
-							id="alias"
 							name="alias"
 							onChange={(event) => props.setAlias(event.target.value)}
 							value={props.alias}
@@ -48,12 +49,12 @@ const index = (props) => {
 						/>
 					</div>
 					<button
-						id={props.longURL === '' ? 'submit-off' : 'submit'}
+						id={props.fullAddress === '' ? 'submit-off' : 'submit'}
 						onClick={
-							props.longURL === '' ? (
+							props.fullAddress === '' ? (
 								() => highlightTitle()
 							) : (
-								() => fetchLink({ address: props.longURL, alias: props.alias }, props.setShorty)
+								() => fetchLink({ address: props.fullAddress, alias: props.alias }, props.setShortcutID)
 							)
 						}
 					>
@@ -63,33 +64,30 @@ const index = (props) => {
 				<div className="result-container">
 					<div className="result-wrapper" >
 						<input
-							className={props.shorty === '' ? 'result result-not-filled' : 'no-result'}
+							className={props.shortcutID === '' ? 'result result-not-filled' : 'no-result'}
               disabled
               onChange={() => null}
-							value={props.shorty === '' ? 'UNLOCK SHY LINK' : ''}
+							value={props.shortcutID === '' ? 'UNLOCK SHY LINK' : ''}
 						/>
 						<input
-							className={props.shorty === '' ? 'no-result' : 'result result-filled'}
+							className={props.shortcutID === '' ? 'no-result' : 'result result-filled'}
               onChange={() => null}
-							disabled={props.shorty === '' ? true : false}
-							onClick={() => copyLink(`https://shylink.herokuapp.com/${props.shorty}`)}
-              value={props.shorty === '' ? '' : formatShorty(props.shorty)}
+							disabled={props.shortcutID === '' ? true : false}
+							onClick={() => copyLink(`${baseURL}${props.shortcutID}`)}
+              value={props.shortcutID === '' ? '' : format(props.shortcutID)}
 						/>
-						<div className={props.shorty === '' ? "result-button-container-hidden" : "result-button-container"} >
-							<a className="result-button" alt="visit page" href={`https://shylink.herokuapp.com/${props.shorty}`} target="_blank" rel="noopener noreferrer">
+						<div className={props.shortcutID === '' ? "result-button-container-hidden" : "result-button-container"} >
+							<a className="result-button" alt="visit page" href={`${baseURL}${props.shortcutID}`} target="_blank" rel="noopener noreferrer">
 								Open
 							</a>
 							<span className={props.copied ? 'copied' : 'not-copied'}>COPIED!</span>
-							<button className="result-button" onClick={() => copyLink(`https://shylink.herokuapp.com/${props.shorty}`)} >
+							<button className="result-button" onClick={() => copyLink(`${baseURL}${props.shortcutID}`)} >
 								Copy
 							</button>
 						</div>
 					</div>
 				</div>
 			</div>
-      <div className="signature-container">
-        <span className="signature"><a href="https://www.linkedin.com/in/alejoluis/" target="_blank" className="signature-link">LUIS ALEJO DESIGNS</a> © 2020.</span>
-      </div>
 		</div>
 	);
 };
