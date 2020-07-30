@@ -3,9 +3,8 @@ import fetchLink from '../../Helpers/fetchLink';
 import './styles.css';
 
 const index = (props) => {
-
 	// const baseURL = 'https://localhost:3000/'
-	const baseURL = 'https://shylink.herokuapp.com/'
+	const baseURL = 'https://shylink.herokuapp.com/';
 
 	const highlightTitle = () => {
 		props.setHighlighter(true);
@@ -19,25 +18,31 @@ const index = (props) => {
 	};
 
 	const fireCopy = () => {
-		return () => copyLink(`${baseURL}${props.shortcutID}`)
-	}
+		return () => copyLink(`${baseURL}${props.shortcutID}`);
+	};
 
 	const format = (shorty) => {
-		const trimmedURL = baseURL.replace('https://', '')
-		return `${trimmedURL}/${shorty}`
+		const trimmedURL = baseURL.replace('https://', '');
+		return `${trimmedURL}${shorty}`;
+	};
+
+	const canSubmit = () => {
+		return props.fullAddress === ''
+			? () => highlightTitle()
+			: () => fetchLink({ address: props.fullAddress, alias: props.alias }, props.setShortcutID);
 	};
 
 	return (
 		<div className="form-container">
 			<div className="form">
-				<span className={props.highlighter ? 'form-title-highlight' : 'form-title'}>
+				<h6 className={props.highlighter ? 'form-title-highlight' : 'form-title'}>
 					Enter A Loud Link Below
-				</span>
+				</h6>
 				<input
 					className="link-field"
 					type="text"
 					name="fullAddress"
-					onChange={(event) => {props.setFullAddress(event.target.value)}}
+					onChange={(ev) => props.setFullAddress(ev.target.value)}
 					value={props.fullAddress}
 					placeholder="Loud Link"
 				/>
@@ -47,45 +52,46 @@ const index = (props) => {
 							className="alias-field"
 							type="text"
 							name="alias"
-							onChange={(event) => props.setAlias(event.target.value)}
+							onChange={(ev) => props.setAlias(ev.target.value)}
 							value={props.alias}
 							placeholder="Custom Slug (optional)"
 						/>
 					</div>
-					<button
-						id={props.fullAddress === '' ? 'submit-off' : 'submit'}
-						onClick={
-							props.fullAddress === '' ? (
-								() => highlightTitle()
-							) : (
-								() => fetchLink({ address: props.fullAddress, alias: props.alias }, props.setShortcutID)
-							)
-						}
-					>
+					<button id={props.fullAddress === '' ? 'submit-off' : 'submit'} onClick={canSubmit()}>
 						MAKE IT SHY
 					</button>
 				</div>
 				<div className="result-container">
-					<div className="result-wrapper" >
+					<div className="result-wrapper">
 						<input
 							className={props.shortcutID === '' ? 'result result-not-filled' : 'no-result'}
-              disabled
-              onChange={() => null}
+							disabled
+							onChange={() => null}
 							value={props.shortcutID === '' ? 'UNLOCK SHY LINK' : ''}
 						/>
 						<input
 							className={props.shortcutID === '' ? 'no-result' : 'result result-filled'}
-              onChange={() => null}
+							onChange={() => null}
 							disabled={props.shortcutID === '' ? true : false}
 							onClick={fireCopy()}
-              value={props.shortcutID === '' ? '' : format(props.shortcutID)}
+							value={props.shortcutID === '' ? '' : format(props.shortcutID)}
 						/>
-						<div className={props.shortcutID === '' ? "result-button-container-hidden" : "result-button-container"} >
-							<a className="result-button" alt="visit page" href={`${baseURL}${props.shortcutID}`} target="_blank" rel="noopener noreferrer">
+						<div
+							className={
+								props.shortcutID === '' ? 'result-button-container-hidden' : 'result-button-container'
+							}
+						>
+							<a
+								className="result-button"
+								alt="visit page"
+								href={`${baseURL}${props.shortcutID}`}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Open
 							</a>
 							<span className={props.copied ? 'copied' : 'not-copied'}>COPIED!</span>
-							<button className="result-button" onClick={fireCopy} >
+							<button className="result-button" onClick={fireCopy()}>
 								Copy
 							</button>
 						</div>
