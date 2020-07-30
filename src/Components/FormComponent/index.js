@@ -9,13 +9,15 @@ const index = (props) => {
 	};
 
 	const copyLink = (link) => {
+		console.log(link)
 		navigator.clipboard.writeText(link);
 		props.setCopied(true);
 		setTimeout(() => props.setCopied(false), 700);
 	};
 
 	const formatShorty = (shorty) => {
-		return shorty.replace('https://', '');
+		return `shylink.herokuapp.com/${shorty}`
+		// return shorty.replace('https://', '');
 	};
 
 	return (
@@ -59,7 +61,7 @@ const index = (props) => {
 					</button>
 				</div>
 				<div className="result-container">
-					<div className="result-wrapper" onClick={props.shorty === '' ? () => highlightTitle() : () => copyLink(props.shorty)}>
+					<div className="result-wrapper" >
 						<input
 							className={props.shorty === '' ? 'result result-not-filled' : 'no-result'}
               disabled
@@ -69,17 +71,18 @@ const index = (props) => {
 						<input
 							className={props.shorty === '' ? 'no-result' : 'result result-filled'}
               onChange={() => null}
-              disabled={props.shorty === '' ? true : false}
+							disabled={props.shorty === '' ? true : false}
+							onClick={() => copyLink(`https://shylink.herokuapp.com/${props.shorty}`)}
               value={props.shorty === '' ? '' : formatShorty(props.shorty)}
 						/>
 						<div className={props.shorty === '' ? "result-button-container-hidden" : "result-button-container"} >
-							<a className="result-button" alt="visit page" href={props.shorty} target="_blank" rel="noopener noreferrer">
+							<a className="result-button" alt="visit page" href={`https://shylink.herokuapp.com/${props.shorty}`} target="_blank" rel="noopener noreferrer">
 								Open
 							</a>
 							<span className={props.copied ? 'copied' : 'not-copied'}>COPIED!</span>
-							<a className="result-button" onClick={() => copyLink(props.shorty)} href={null}>
+							<button className="result-button" onClick={() => copyLink(`https://shylink.herokuapp.com/${props.shorty}`)} >
 								Copy
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>

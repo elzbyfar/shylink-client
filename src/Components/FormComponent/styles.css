@@ -234,6 +234,13 @@
 	width: 50px;
 	text-align: center;
 	transition: all 0.2s ease-in-out;
+	border: none;
+	background-color: transparent;
+}
+.result-button:focus {
+	outline: none;
+	border: 0.5px solid black;
+	border-radius: 5px;
 }
 .result-button:hover {
 	display: flex;
