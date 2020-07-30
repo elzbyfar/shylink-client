@@ -7,27 +7,11 @@
 
 ## Description
 
-This is an iOS compatible side-scrolling, 2D, aquatic-themed, multi-level game
-that allows single-handed game-play. The object of the game is for a user to
-move their character across dangerous waters collecting Pellets in a given
-amount of time while avoiding other creatures and hooks. This game was inspired by FlappyBird but has an underwater twist.
+This is a url shortener. On the client end we have React + CSS. The back end is a PostgreSQL/Ruby on Rails API. The short URLs consist of the base url (https://shylink.herokuapp.com) followed by a random hexanumeeric code or a user-generated custom slug. 
 
-## Live Demo Instructions
+## Live Demo 
 
-To try out the game for yourself follow these instructions:
-
-#### iPhone 8 or greater
-
-- Install the [Expo Client](https://itunes.apple.com/app/apple-store/id982107779) app on your iPhone.
-- Navigate to [this link](https://snack.expo.io/@elzbyfar/off-the-hook) on your iPhone's.
-- Click “Open with Expo”
-
-#### Web Browser (Mac/Windows)
-
-- Navigate to [this link](https://snack.expo.io/@elzbyfar/off-the-hook).
-- Near the upper-right hand corner select the iOS tab to launch the built-in demo.
-- Alternatively you can click 'Run' at the next to the Search bar a the top of the page. This will reveal a QR code you can scan with an iPhone. (You will need to have Expo Client installed on your phone if you choose this option.)
-  Once the app gets started you're ready to play!
+[Shylink](https://shylink.netlify.app)
 
 ## Video Demo
 
