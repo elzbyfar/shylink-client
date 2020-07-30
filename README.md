@@ -9,13 +9,11 @@
 
 This is a url shortener. On the client end we have React + CSS. The back end is a PostgreSQL/Ruby on Rails API. The short URLs consist of the base url (https://shylink.herokuapp.com) followed by a random hexanumeeric code or a user-generated custom slug. 
 
-## Live Demo 
+## Shylink Demo 
 
-[Shylink](https://shylink.netlify.app)
+#### [Live Demo](https://shylink.netlify.app)
 
-## Video Demo
-
-Learn how the game works by watching this [video demonstration](https://youtu.be/9i7zOe8aDm8).
+#### [Video Demo](https://youtu.be/UMLOOqhmKEI)
 
 ## Start Game
 
