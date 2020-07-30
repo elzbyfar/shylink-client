@@ -4,9 +4,8 @@ import './styles.css';
 
 const index = (props) => {
 
-
-	const baseURL = 'https://localhost:3000/'
-	// const baseURL = 'https://shylink.herokuapp.com/'
+	// const baseURL = 'https://localhost:3000/'
+	const baseURL = 'https://shylink.herokuapp.com/'
 
 	const highlightTitle = () => {
 		props.setHighlighter(true);
@@ -19,8 +18,13 @@ const index = (props) => {
 		setTimeout(() => props.setCopied(false), 700);
 	};
 
+	const fireCopy = () => {
+		return () => copyLink(`${baseURL}${props.shortcutID}`)
+	}
+
 	const format = (shorty) => {
-		return `${baseURL}/${shorty}`
+		const trimmedURL = baseURL.replace('https://', '')
+		return `${trimmedURL}/${shorty}`
 	};
 
 	return (
@@ -73,7 +77,7 @@ const index = (props) => {
 							className={props.shortcutID === '' ? 'no-result' : 'result result-filled'}
               onChange={() => null}
 							disabled={props.shortcutID === '' ? true : false}
-							onClick={() => copyLink(`${baseURL}${props.shortcutID}`)}
+							onClick={fireCopy()}
               value={props.shortcutID === '' ? '' : format(props.shortcutID)}
 						/>
 						<div className={props.shortcutID === '' ? "result-button-container-hidden" : "result-button-container"} >
@@ -81,7 +85,7 @@ const index = (props) => {
 								Open
 							</a>
 							<span className={props.copied ? 'copied' : 'not-copied'}>COPIED!</span>
-							<button className="result-button" onClick={() => copyLink(`${baseURL}${props.shortcutID}`)} >
+							<button className="result-button" onClick={fireCopy} >
 								Copy
 							</button>
 						</div>

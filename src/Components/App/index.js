@@ -6,8 +6,8 @@ import './styles.css';
 
 function App() {
 	const [ fullAddress, setFullAddress ] = useState('');
-	const [ alias, setAlias ] = useState('');
 	const [ shortcutID, setShortcutID ] = useState('');
+	const [ alias, setAlias ] = useState('');
 	const [ copied, setCopied ] = useState(false);
 	const [ highlighter, setHighlighter ] = useState(false);
 
