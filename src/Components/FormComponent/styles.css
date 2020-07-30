@@ -228,10 +228,10 @@
 	color: rgb(86, 88, 88);
 	font-weight: 700;
 	text-decoration: none;
-	height: 20px;
+	height: 25px;
 	align-items: center;
 	justify-content: center;
-	width: 50px;
+	width: 80px;
 	text-align: center;
 	transition: all 0.2s ease-in-out;
 	border: none;
@@ -239,7 +239,7 @@
 }
 .result-button:focus {
 	outline: none;
-	border: 0.5px solid black;
+	border: 0.5px solid rgb(185, 185, 185);
 	border-radius: 5px;
 }
 .result-button:hover {
@@ -248,10 +248,10 @@
 	color: rgb(8, 8, 8);
 	transition: all 0.2s ease-in-out;
 	border-radius: 5px;
-	height: 20px;
+	height: 25px;
 	align-items: center;
 	justify-content: center;
-	width: 50px;
+	width: 80px;
 	text-align: center;
 	box-shadow: 2px 4px #888888;
 }
