@@ -1,6 +1,6 @@
 const fetchLink = ({address, alias}, setShorty) => {
-  // fetch('https://shylink.herokuapp.com/urls', {
-  fetch('http://localhost:3000/urls', {
+  fetch('https://shylink.herokuapp.com/urls', {
+  // fetch('http://localhost:3000/urls', {
   method: 'POST', 
   headers: {
     'content-type': 'application/json',
