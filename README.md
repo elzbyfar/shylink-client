@@ -1,6 +1,6 @@
 <div align="center">
 <img
-    src="https://github.com/elzbyfar/tiny-url-client/blob/master/src/Components/LogoComponent/assets/logo.gif"
+    src="https://github.com/elzbyfar/tiny-url-client/blob/master/src/Components/LogoComponent/assets/shy-banner.jpg"
     width="100%"
   />
 </div>
