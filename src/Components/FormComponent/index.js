@@ -17,45 +17,44 @@ const index = (props) => {
 		setTimeout(() => props.setCopied(false), 700);
 	};
 
-	const fireCopy = () => {
-		return () => copyLink(`${baseURL}${props.shortcutID}`);
-	};
-	const format = (shorty) => {
-		const trimmedURL = baseURL.replace('https://', '');
-		return `${trimmedURL}${shorty}`;
-	};
-
 	const canSubmit = () => {
 		return props.fullAddress === ''
 			? () => highlightTitle()
 			: () => fetchLink({ address: props.fullAddress, alias: props.alias }, props.setShortcutID);
 	};
 
+	const format = (shortcutID) => {
+		const trimmedURL = baseURL.replace('https://', '');
+		return `${trimmedURL}${shortcutID}`;
+	};
+
+	const fireCopy = () => {
+		return () => copyLink(`${baseURL}${props.shortcutID}`);
+	};
+
+	const shortcutIsBlank = () => {
+		return props.shortcutID === '';
+	};
+
 	return (
 		<div className="form-container">
 			<div className="form">
-				<h6 className={props.highlighter ? 'form-title-highlight' : 'form-title'}>
-					Enter A Loud Link Below
-				</h6>
+				<h6 className={props.highlighter ? 'form-title-highlight' : 'form-title'}>Enter A Loud Link Below</h6>
 				<input
 					className="link-field"
 					type="text"
-					name="fullAddress"
 					onChange={(ev) => props.setFullAddress(ev.target.value)}
 					value={props.fullAddress}
 					placeholder="Loud Link"
 				/>
 				<div className="submit-container">
-					<div className="alias-container">
-						<input
-							className="alias-field"
-							type="text"
-							name="alias"
-							onChange={(ev) => props.setAlias(ev.target.value)}
-							value={props.alias}
-							placeholder="Custom Slug (optional)"
-						/>
-					</div>
+					<input
+						className="alias-field"
+						type="text"
+						onChange={(ev) => props.setAlias(ev.target.value)}
+						value={props.alias}
+						placeholder="Custom Slug (optional)"
+					/>
 					<button id={props.fullAddress === '' ? 'submit-off' : 'submit'} onClick={canSubmit()}>
 						MAKE IT SHY
 					</button>
@@ -63,22 +62,20 @@ const index = (props) => {
 				<div className="result-container">
 					<div className="result-wrapper">
 						<input
-							className={props.shortcutID === '' ? 'result result-not-filled' : 'no-result'}
+							className={shortcutIsBlank() ? 'result result-not-filled' : 'no-result'}
 							disabled
 							onChange={() => null}
-							value={props.shortcutID === '' ? 'UNLOCK SHY LINK' : ''}
+							value={shortcutIsBlank() ? 'UNLOCK SHY LINK' : ''}
 						/>
 						<input
-							className={props.shortcutID === '' ? 'no-result' : 'result result-filled'}
+							className={shortcutIsBlank() ? 'no-result' : 'result result-filled'}
 							onChange={() => null}
-							disabled={props.shortcutID === '' ? true : false}
+							disabled={shortcutIsBlank()}
 							onClick={fireCopy()}
-							value={props.shortcutID === '' ? '' : format(props.shortcutID)}
+							value={shortcutIsBlank() ? '' : format(props.shortcutID)}
 						/>
 						<div
-							className={
-								props.shortcutID === '' ? 'result-button-container-hidden' : 'result-button-container'
-							}
+							className={shortcutIsBlank() ? 'result-button-container-hidden' : 'result-button-container'}
 						>
 							<a
 								className="result-button"
