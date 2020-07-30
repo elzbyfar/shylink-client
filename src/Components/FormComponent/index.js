@@ -20,7 +20,6 @@ const index = (props) => {
 	const fireCopy = () => {
 		return () => copyLink(`${baseURL}${props.shortcutID}`);
 	};
-
 	const format = (shorty) => {
 		const trimmedURL = baseURL.replace('https://', '');
 		return `${trimmedURL}${shorty}`;
