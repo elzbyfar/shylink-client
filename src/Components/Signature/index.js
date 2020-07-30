@@ -13,7 +13,7 @@ const index = () => {
 				>
 					ALEJO DESIGNS
 				</a>{' '}
-				© 2020.
+				© 2020
 			</span>
 		</div>
 	);
