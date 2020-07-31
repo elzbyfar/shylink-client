@@ -20,6 +20,10 @@ This is a url shortener. On the client end we have React and a responsive CSS de
     src="https://github.com/elzbyfar/tiny-url-client/blob/master/src/Components/LogoComponent/assets/shylink-demo.gif"
     width="100%"
   />
+  
+Through the use of media queries we accomplish a responsive design accounting for:
+- Macbook 13"
+- iPhone 6/7/8, Plux and X Portrait & Landscape
 
 ## Contributing To "Shylink"
 
