@@ -11,8 +11,8 @@ This is a url shortener. On the client end we have React and a responsive CSS de
 
 ## Shylink Demo 
 
-- #### [Live Demo](https://shylink.netlify.app)
-- #### [Video Demo](https://youtu.be/UMLOOqhmKEI)
+- ### [Live Demo](https://shylink.netlify.app)
+- ### [Video Demo](https://youtu.be/UMLOOqhmKEI)
 
 ## Responsive Design
 
@@ -24,6 +24,8 @@ This is a url shortener. On the client end we have React and a responsive CSS de
 Through the use of media queries we accomplish a responsive design accounting for:
 - Macbook 13"
 - iPhone 6/7/8, Plux and X Portrait & Landscape
+- Galaxy S5
+- ...and more
 
 ## Contributing To "Shylink"
 
