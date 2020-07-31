@@ -7,51 +7,21 @@
 
 ## Description
 
-This is a url shortener. On the client end we have React + CSS. The back end is a PostgreSQL/Ruby on Rails API. The short URLs consist of the base url (https://shylink.herokuapp.com) followed by a random hexanumeeric code or a user-generated custom slug. 
+This is a url shortener. On the client end we have React and a responsive CSS design. The back end is a Ruby on Rails API with PostgreSQL. The short URLs are stored in the database and consist of the base url (https://shylink.herokuapp.com) followed by a random hexanumeeric code or a user-generated custom slug. 
 
 ## Shylink Demo 
 
-#### [Live Demo](https://shylink.netlify.app)
+- #### [Live Demo](https://shylink.netlify.app)
+- #### [Video Demo](https://youtu.be/UMLOOqhmKEI)
 
-#### [Video Demo](https://youtu.be/UMLOOqhmKEI)
+## Responsive Design
 
-## Start Game
+<img
+    src="https://github.com/elzbyfar/tiny-url-client/blob/master/src/Components/LogoComponent/assets/shylink-demo.gif"
+    width="100%"
+  />
 
-Create a new account or sign-in. Select a character. Choose the level you would like to play.
-
-<div align="center">
-  <table>
-    <tbody>
-      <tr>
-          <th align="center" height="15"><h3>HOMESCREEN</h3></th>
-          <th align="center" height="15"><h3>MENUS</h3></th>
-          <th align="center" height="15"><h3>GAMEPLAY</h3></th>
-      </tr>
-      <tr>
-        <td align="center">
-          <img
-            src="https://github.com/elzbyfar/off-the-hook-client-side-update/blob/master/App/assets/img/homescreen.gif"
-            width="95%"
-          /> 
-        </td>
-        <td align="center">
-          <img
-            src="https://github.com/elzbyfar/off-the-hook-client-side-update/blob/master/App/assets/img/character-level-select.gif"
-            width="95%"
-          />
-        </td>
-        <td align="center">
-          <img
-            src="https://github.com/elzbyfar/off-the-hook-client-side-update/blob/master/App/assets/img/level-one.gif"
-            width="95%"
-          /> 
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-## Contributing To "Off The Hook"
+## Contributing To "Shylink"
 
 To contribute to Off The Hook, follow these steps:
 
@@ -69,19 +39,15 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 Before you begin, be sure to have the following installed:
 
-- [Back End Repository](https://github.com/elzbyfar/off-the-hook-server-side)
-- xCode 11.4.1
+- [Back End Repository](https://github.com/elzbyfar/tiny-ur-backend)
 - Ruby 2.6.1
-- Rails 6.0.2.2
+- Rails 6.0.3.2
 - PostgreSQL 12.1
 
 ## Inspiration
 
-I do not own the rights to any of the images included in this repository. All images were pulled from standard Google searches and edited with Adobe Photoshop. I sought out inspiration from:
-
-- [Flappy Bird in React Native](https://www.youtube.com/watch?v=qBGnfULn8W4&t=4s)
-- [Navigation React Native](https://www.youtube.com/watch?v=nQVCkqvU1uE&t=428s)
-- Honorary Mentions: Finding Nemo & American Dad
+- [Tinyurl](https://tinyurl.com/)
+- [Bitly](https://bitly.com/)
 
 ## Contact
 
