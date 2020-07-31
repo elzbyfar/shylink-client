@@ -7,7 +7,7 @@
 
 ## Description
 
-This is a url shortener. On the client end we have React and a responsive CSS design. The back end is a Ruby on Rails API with PostgreSQL. The short URLs are stored in the database and consist of the base url followed by a random hexanumeeric code or a user-generated custom slug. 
+This is a url shortener. On the client end we have React and a responsive CSS design. The back end is a Ruby on Rails API with PostgreSQL. The short URLs are stored in the database and consist of the base url followed by a random hexadecimal code or a user-generated custom slug. 
 
 ## Shylink Demo 
 
